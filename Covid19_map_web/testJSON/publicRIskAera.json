@@ -1,0 +1,114 @@
+{
+    "data": [
+        {
+            "LOCATION": "佛山市桂城街道金域名都小区",
+            "LONGITUDE": 23.06496,
+            "DIMENSIONS": 113.175112
+        },
+        {
+            "LOCATION": "佛山市桂城街道金域名都小区（3公里内）",
+            "LONGITUDE": 23.06496,
+            "DIMENSIONS": 113.175112
+        },
+        {
+            "LOCATION": "大沥镇景裕嘉园小区及周边区域",
+            "LONGITUDE": 23.094459,
+            "DIMENSIONS": 113.212299
+        },
+        {
+            "LOCATION": "桂城街道夏南二社区",
+            "LONGITUDE": 23.055536,
+            "DIMENSIONS": 113.183959
+        },
+        {
+            "LOCATION": "桂城街道夏东社区",
+            "LONGITUDE": 23.047647,
+            "DIMENSIONS": 113.190423
+        },
+        {
+            "LOCATION": "桂城街道平北社区",
+            "LONGITUDE": 23.039072,
+            "DIMENSIONS": 113.203531
+        },
+        {
+            "LOCATION": "桂城街道大圩社区",
+            "LONGITUDE": 23.031349,
+            "DIMENSIONS": 113.2102
+        },
+        {
+            "LOCATION": "桂城街道江滨社区",
+            "LONGITUDE": 23.030774,
+            "DIMENSIONS": 113.211598
+        },
+        {
+            "LOCATION": "桂城街道平东社区",
+            "LONGITUDE": 23.023761,
+            "DIMENSIONS": 113.209881
+        },
+        {
+            "LOCATION": "桂城街道同成社区",
+            "LONGITUDE": 23.067126,
+            "DIMENSIONS": 113.175597
+        },
+        {
+            "LOCATION": "大沥镇黄岐社区",
+            "LONGITUDE": 23.106826,
+            "DIMENSIONS": 113.199004
+        },
+        {
+            "LOCATION": "大沥镇东秀社区",
+            "LONGITUDE": 23.097611,
+            "DIMENSIONS": 113.205015
+        },
+        {
+            "LOCATION": "大沥镇岐阳社区",
+            "LONGITUDE": 23.114334,
+            "DIMENSIONS": 113.196191
+        },
+        {
+            "LOCATION": "大沥镇洞庭社区",
+            "LONGITUDE": 23.110804,
+            "DIMENSIONS": 113.190631
+        },
+        {
+            "LOCATION": "大沥镇雍雅社区",
+            "LONGITUDE": 23.092906,
+            "DIMENSIONS": 113.199206
+        },
+        {
+            "LOCATION": "三水区千叶花苑小区（桂花苑、荷花苑）",
+            "LONGITUDE": 23.192129,
+            "DIMENSIONS": 112.868746
+        },
+        {
+            "LOCATION": "三水区千叶花苑小区（其他苑）",
+            "LONGITUDE": 23.192129,
+            "DIMENSIONS": 112.868746
+        },
+        {
+            "LOCATION": "黄岐嘉州花园",
+            "LONGITUDE": 23.116196,
+            "DIMENSIONS": 113.179671
+        },
+        {
+            "LOCATION": "大沥河西社区红璞公寓",
+            "LONGITUDE": 23.081462,
+            "DIMENSIONS": 113.160123
+        },
+        {
+            "LOCATION": "里水天御江畔",
+            "LONGITUDE": 23.157543,
+            "DIMENSIONS": 113.173137
+        },
+        {
+            "LOCATION": "三水恒達花園",
+            "LONGITUDE": 23.17512,
+            "DIMENSIONS": 112.893513
+        },
+        {
+            "LOCATION": "西南三水廣場",
+            "LONGITUDE": 23.172048,
+            "DIMENSIONS": 112.892674
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+.container{
+    overflow: hidden;
+    display: flex;
+
+}
+
+#allmap {
+    width: 85%;
+    min-height: 100vh;
+}
+.control{
+    background-color: rgb(154, 165, 159);
+    width: 15%;
+    overflow: auto;
+}
+h3{
+    text-align: center;
+}
+
+#iuputkm{
+    width: 60px;
+}
+
+#search,#clear{
+    background-color: rgb(226, 238, 240);
+    margin-right: 5px;
+    font-size: medium;
+}
+#r-result {
+    width: 100%;
+    margin-top: 5px;
+}
+
+p {
+    margin: 5px;
+    font-size: 14px;
+}
+#highriskman{
+    border-collapse: collapse;
+}
+
+#highriskman td,#highriskman th{
+    border: 1px solid black;
+    text-align: center;
+}
+#highriskman th:nth-child(1){
+    width: 20%;
+}
+#highriskman th:nth-child(2){
+    width: 22%;
+}
+#highriskman th:nth-child(3){
+    width: 45%;
+}
+#peoplenum{
+    font-size: 16px;
+}
+#overlay{
+    position: absolute;
+    right: 10px;
+    top: 60px; 
+}
+h4{
+    text-align: center;
+}
+.inputriskditance{
+    text-decoration: line-through;
+    opacity: 0.3;
+}

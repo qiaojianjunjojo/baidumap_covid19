@@ -1,0 +1,24 @@
+version: '2.4'
+services:
+  web:    
+    image: ${IMAGETAG}
+    container_name: BD-Dev-NumberofHit-API
+    network_mode: 'bridge1'
+    hostname: '0.0.0.0'
+    mem_limit: 1024m
+    cpus: 2
+    volumes:
+      - /home/DDXIAN/app/Flask_DB/NumberofHit_API/:/app/db
+    ports:
+      - "40025:5000"
+    restart: always  
+    dns:
+      - 10.189.128.36
+    environment:
+    #  - FLASK_APP=manage.py
+    #  - FLASK_DEBUG=1
+      - 'RUN=flask run --host=0.0.0.0 --port=5000'
+      - 'TZ=Asia/Taipei'
+# command: flask run --host=0.0.0.0 --port=80
+# Infinite loop, to keep it alive, for debugging
+# command: bash -c "while true; do echo 'sleeping...' && sleep 10; done"

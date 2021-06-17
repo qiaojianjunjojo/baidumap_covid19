@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./JS/jquery.js"></script>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=hv6HD8az9lEihMmtSZxCcDNU0nmqepMO"></script>
+    <script src="./JS/cookie.js"></script>
+    <script src="./JS/excel.min.js"></script>
+    <script src="./JS/translate.js"></script>
+    <script src="./JS/index.js"></script>
+    <title>風險區域分佈</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="allmap"></div>
+        <div class="control">
+            <div id="inputriskditance">風險範圍：<input type="text" name="" id="iuputkm" value="1">km
+            </div>
+            <div>低風險員工標記數設置：
+                <select name="cars" id="peoplenum">
+                    <option value="0">0</option>
+                    <option value="200" selected>200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="1000">2000</option>
+                    <option value="1000">5000</option>
+                    <option value="10000">10000</option>
+                </select>
+                <br>
+                地图呈現设定：<br>
+                <input type="radio" name="type" value="1" checked> 風險區域
+                <input type="radio" name="type" value="2"> 閉環區域<br>
+                <hr>
+                <div class="description">
+                    <img src="./images/red.png" alt="">:風險地
+                    <img src="./images/green.png" alt="">:低風險人員<br>
+                    <img src="./images/blue.png" alt="">:風險區内已打疫苗人員<br>
+                    <img src="./images/yellow.png" alt="">:風險區域内未打疫苗人員
+                </div>
+                <hr>
+                <button id="search">重新search</button><button id="clear">清除緩存數據</button>
+
+
+                <img src="./images/loading.gif" id="overlay">
+                <div>
+                    <h3>風險範圍内人員: <span id="numberofRighrisk"></span>
+                    </h3>
+                    <h4>已接種疫苗: <span id="number1"></span> |未接種疫苗: <span id="number2"></span></h4>
+                    <h4>未接種疫苗人員：</h4>
+                    <button id="toexcel">匯出EXCEL</button>
+                    <table id="highriskman"></table>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

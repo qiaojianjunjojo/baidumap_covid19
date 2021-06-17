@@ -1,0 +1,120 @@
+image:
+  name: docker/compose:1.25.4
+  entrypoint: ["/bin/sh", "-c"]
+
+services:
+    - docker:dind
+
+before_script:
+  # - docker info
+  # - docker version
+  # - docker-compose version
+
+stages:
+  - build
+  - api_deploy
+  # - test
+  # - web_deploy
+
+variables :
+  img_api : data_api
+  # img_web : q_web_test
+
+build-for-testing:
+  stage: build
+  tags:
+    - "docker-runner"
+  #except:
+  only:
+    - master
+  script:
+    - echo "branch:"$CI_COMMIT_REF_NAME
+    - echo " commit hash:"$CI_COMMIT_SHA
+    - echo "build for testing"
+    #- cd ..
+    - docker build -t $img_api:$CI_COMMIT_SHA . --no-cache
+    # - cd ..
+    # - cd INT_Portal_Web1
+    # - docker build -t $img_web:$CI_COMMIT_SHA . --no-cache
+   #- chmod -R 775 /app/
+    - echo "build success"
+
+# Test:
+#   stage: test
+#   image: selenium:fs20200824
+#   tags:
+#     - "docker-runner"
+#   only:
+#     - master
+#   script:
+#     - python --version
+#     - python test.py
+
+
+Data-API-deploy:
+  stage: api_deploy
+  tags:
+    - "docker-runner"
+  #except:
+  only:
+    - master
+  script:
+    - echo "deploy to QPortal-webapi server"
+    #- cd Q_Portal_WEBAPI
+    - export IMAGETAG=$img_api:$CI_COMMIT_SHA
+    - docker-compose down
+    - docker-compose up -d   
+    # - docker image rmi $(docker images -f "dangling=true" -q | head -n 1)
+    - img=$(docker images $img_api -q | tail -n 1)
+    - echo "img:"$img
+    - new_img=$(docker images $IMAGETAG -q)
+    - echo "new_img:"$new_img
+    # - if [ z"$img" == z ]; then
+    - if [ $img == $new_img ]; then
+    - echo "no img can delete"
+    - elif [ $(docker images $img_api -q | wc -l) -le 5 ]; then
+    - echo "img version less 5"
+    - else
+    - docker image rmi $(docker images $img_api -q | tail -n 1)
+    - fi
+    
+    #- docker-compose build   
+
+
+# INT-WEB-deploy:
+#   stage: web_deploy
+#   tags:
+#     - "docker-runner"
+#   #except:
+#   only:
+#     - master
+#   script:
+#     - echo "deploy to int-web server"
+#     - cd INT_Portal_Web1
+#     - export IMAGETAG=$img_web:$CI_COMMIT_SHA
+#     - docker-compose down
+#     # - docker image rmi $(docker images -f "dangling=true" -q | head -n 2)
+#     - docker-compose up -d
+#     - img=$(docker images $img_web -q | tail -n 1)
+#     - echo "img:"$img
+#     - new_img=$(docker images $IMAGETAG -q)
+#     - echo "new_img:"$new_img
+#     # - if [ z"$img" == z ]; then
+#     - if [ $img == $new_img ]; then
+#     - echo "no img can delete"
+#     - elif [ $(docker images $img_api -q | wc -l) -le 5 ]; then
+#     - echo "img version less 5"
+#     - else
+#     - docker image rmi $(docker images $img_web -q | tail -n 1)
+#     - fi
+    
+
+# release-deploy:
+#   stage: web_deploy
+#   tags:
+#     - "docker-runner"
+#   only:
+#     - release
+#   script:
+#     - echo "deploy to release server"
+#   when: manual
