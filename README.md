@@ -27,9 +27,14 @@
   
 ![Image text](https://github.com/qiaojianjunjojo/baidumap_covid19/blob/master/Covid19_map_web/images/2.PNG)
 ## 相關鏈接及注意事項
-百度地圖API(https://lbsyun.baidu.com/index.php?title=jspopular3.0);裏面會有一些demo教你怎麽在html初始化一個map,怎麽在上面畫點。。。  
-注意事項一：使用前需要先申請一个自己的服務密鑰.会使用在html ```<script>```中，不然你是看不到地图的。
-注意事项二：坐标系。百度地图(BD09)用腾讯地图(GCJ02)产生出来的坐标定位会有偏差，一定要确保坐标系一致；
+百度地圖API(https://lbsyun.baidu.com/index.php?title=jspopular3.0)  
+  
+如何判断一个点是否在多边形内部(https://www.cnblogs.com/luxiaoxun/p/3722358.html)  
+  
+注意事項一：使用前需要先申請一个自己的服務密鑰.会使用在html ```<script src =XXXak=?>```中，不然你是看不到地图的。  
+  
+注意事项二：坐标系一致性。  
+百度地图(BD09)用腾讯地图(GCJ02)产生出来的坐标定位会有偏差，一定要确保坐标系一致；  
 ```
 目前国内主要有以下三种坐标系：
 WGS84：为一种大地坐标系，也是目前广泛使用的GPS全球卫星定位系统使用的坐标系。
