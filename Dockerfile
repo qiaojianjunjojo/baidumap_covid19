@@ -2,7 +2,7 @@
 # 使用python 3.7作為基礎鏡像
 FROM apibase:V1.1
 
-LABEL maintainer="nick76.chang <nick76.chang@innolux.com>"
+LABEL maintainer="jojo"
 
 
 # Set the working directory to /app

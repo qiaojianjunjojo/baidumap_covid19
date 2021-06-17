@@ -29,7 +29,7 @@ log = Logger(app)
 @log.writeLog()
 def FSAP_Number_Of_Hits():
     """
-    佛山MIS公用功能，將系統登入寫入到數據庫中
+    公用功能，將系統登入寫入到數據庫中
     ---
     tags:
       - 公用功能
