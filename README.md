@@ -8,6 +8,12 @@
 後端：python flask,sqlserver2008,Docker, CI/CD 
 
 ---
+
+应用预览：
+![Image text](https://github.com/qiaojianjunjojo/baidumap_covid19/blob/master/Covid19_map_web/images/1.PNG)
+
+  
+![Image text](https://github.com/qiaojianjunjojo/baidumap_covid19/blob/master/Covid19_map_web/images/2.PNG)
 ## 相關鏈接及注意事項
 百度地圖API(https://lbsyun.baidu.com/index.php?title=jspopular3.0);裏面會有一些demo教你怎麽在html初始化一個map,怎麽在上面畫點。。。  
 注意事項一：使用前需要先申請一个自己的服務密鑰.会使用在html ```<script>```中，不然你是看不到地图的。
